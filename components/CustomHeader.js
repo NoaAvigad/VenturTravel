@@ -8,14 +8,13 @@ const CustomHeader = props => {
     <View
       style={{
         height: 56,
-        marginTop: Platform.OS == "ios" ? 20 : 0 
+        marginTop: Platform.OS == "ios" ? 20 : 0,
+        backgroundColor: "#000"
       }}
     >
-      <LinearGradient
-        colors={["#6200EE", "#3700B3"]}
-      >
+    <LinearGradient colors={["#6200EE", "#3700B3"]}>
         <Header {...props} />
-      </LinearGradient>
+    </LinearGradient>
     </View>
   );
 };
