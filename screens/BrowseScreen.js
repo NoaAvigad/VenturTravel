@@ -1,11 +1,14 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView, StatusBar } from "react-native";
 
 const BrowseScreen = () => {
     return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-          <Text>Moods</Text>
-        </View>
+      <SafeAreaView style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#181515" }}>
+        <StatusBar
+          barStyle="light-content"
+        />
+            <Text style={ {color: "#fff"}}>Moods</Text>
+        </SafeAreaView>
     );
 }
 

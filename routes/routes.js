@@ -1,13 +1,13 @@
 import React from "react";
 import { Ionicons } from '@expo/vector-icons';
 import { createAppContainer, createStackNavigator, createBottomTabNavigator } from "react-navigation";
+import { Text, SafeAreaView } from "react-native";
 
 // Screens
 import BrowseScreen from "../screens/BrowseScreen";
 import DiscoverScreen from "../screens/DiscoverScreen";
 import SavedScreen from "../screens/SavedScreen";
 
-import CustomHeader from "../components/CustomHeader";
 import HeaderStyles from "../styles/HeaderStyle";
 
 const Browse = createStackNavigator(
@@ -16,7 +16,7 @@ const Browse = createStackNavigator(
       screen: BrowseScreen,
       navigationOptions: {
         headerTitle: "Mood",
-        header: props => <CustomHeader {...props} />
+        ...HeaderStyles
       }
     },
     // MoodCards: {
@@ -31,7 +31,6 @@ const Browse = createStackNavigator(
   {
     initialRouteName: "Browse",
     navigationOptions: {
-      ...HeaderStyles,
       animationEnabled: true,
       tabBarIcon: ({ focused, tintColor }) => {
         return <Ionicons name='ios-search' size={25} color={tintColor} />;
@@ -46,14 +45,13 @@ const Discover = createStackNavigator(
       screen: DiscoverScreen,
       navigationOptions: {
         headerTitle: "Discover",
-        //header: props => <CustomHeader {...props} />
+        ...HeaderStyles,
       }
     },
   },
   {
     initialRouteName: "Discover",
     navigationOptions: {
-      ...HeaderStyles,
       animationEnabled: true,
       tabBarIcon: ({ focused, tintColor }) => {
         return <Ionicons name='ios-pin' size={25} color={tintColor} />;
@@ -68,14 +66,13 @@ const Saved = createStackNavigator(
       screen: SavedScreen,
       navigationOptions: {
         headerTitle: "Saved Activities",
-        //header: props => <CustomHeader {...props} />
+        ...HeaderStyles,
       }
     },
   },
   {
     initialRouteName: "Saved",
     navigationOptions: {
-      ...HeaderStyles,
       animationEnabled: true,
       tabBarIcon: ({ focused, tintColor }) => {
         return <Ionicons name='ios-wallet' size={25} color={tintColor} />;
@@ -103,7 +100,8 @@ const TabRoutes = createAppContainer(createBottomTabNavigator(
       labelStyle: {
         fontSize: 12,
         lineHeight: 20,
-      }
+        fontFamily: "Futura",
+      },
     },
     animationEnabled: true,
     swipeEnabled: true,

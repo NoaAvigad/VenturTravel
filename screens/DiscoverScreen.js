@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 
 const DiscoverScreen = () => {
     return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-          <Text>Discover Page is coming soon..</Text>
-        </View>
+      <SafeAreaView style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#181515" }}>
+        <Text style={ {color: "#fff"}}>Discover Page is coming soon..</Text>
+      </SafeAreaView>
     );
 }
 

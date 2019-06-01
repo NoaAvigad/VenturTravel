@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 
 const SavedScreen = () => {
     return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-          <Text>Saved Page is coming soon..</Text>
-        </View>
+      <SafeAreaView style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#181515" }}>
+        <Text style={ {color: "#fff"}}>Saved Page is coming soon..</Text>
+      </SafeAreaView>
     );
 }
 
