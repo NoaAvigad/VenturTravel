@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, SafeAreaView, StatusBar } from "react-native";
+import { Text, SafeAreaView, StatusBar } from "react-native";
 
 const BrowseScreen = () => {
     return (
@@ -7,7 +7,7 @@ const BrowseScreen = () => {
         <StatusBar
           barStyle="light-content"
         />
-            <Text style={ {color: "#fff"}}>Moods</Text>
+        <Text style={ {color: "#fff", fontFamily: "Futura"}}>Moods</Text>
         </SafeAreaView>
     );
 }
