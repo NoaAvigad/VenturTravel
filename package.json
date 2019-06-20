@@ -11,7 +11,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^32.0.0",
+    "expo": "^33.0.6",
     "react": "^16.8.0",
     "react-navigation": "^3.0.9",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz"
