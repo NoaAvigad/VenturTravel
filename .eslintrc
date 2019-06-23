@@ -19,6 +19,7 @@
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "comma-dangle": ["error", "never"],
+    "eol-last": ["error", "always"],
     "global-require": "off",
 
     "import/default": "error",
