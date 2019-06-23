@@ -6,13 +6,15 @@
     "ios": "expo start --ios",
     "eject": "expo eject",
     "test": "jest",
+    "test:watch": "jest --watch --coverage=false --changedSince=origin/master",
+    "test:debug": "jest -o --watch --coverage=false",
     "commit": "git-cz",
     "lint:ec": "npx editorconfig-checker .",
     "lint:js": "eslint src --ext ts,tsx,js,jsx",
     "lint": "npx npm-run-all -p -c -l lint:*",
     "prettier": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|scss|ts|tsx|md|mdx|graphql)\"",
     "format": "npm run prettier -- --write",
-    "validate": "npm run lint && npm run prettier -- --list-different"
+    "validate": "npm run test && npm run lint && npm run prettier -- --list-different"
   },
   "husky": {
     "hooks": {
@@ -22,16 +24,19 @@
   "jest": {
     "preset": "jest-expo",
     "transform": {
-      "\\.(js?|jsx?)$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    }
+      "^.+\\.(js?|jsx?)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-navigation)/"
+    ]
   },
   "dependencies": {
     "@expo/vector-icons": "^10.0.2",
     "expo": "^33.0.7",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.2.tar.gz",
-    "react-navigation": "^3.0.9"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
+    "react-navigation": "^3.11.0"
   },
   "devDependencies": {
     "@babel/runtime": "^7.4.5",

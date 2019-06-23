@@ -5,6 +5,21 @@ import BrowseStack from "./BrowseStack";
 import DiscoverStack from "./DiscoverStack";
 import SavedStack from "./SavedStack";
 
+const tabStyle = {
+  activeTintColor: "#FCFCFC",
+  inactiveTintColor: "#A8A8A8",
+  style: {
+    height: 60,
+    paddingVertical: 5,
+    backgroundColor: "#000"
+  },
+  labelStyle: {
+    fontSize: 12,
+    lineHeight: 20,
+    fontFamily: "Futura"
+  }
+};
+
 const TabRoutes = createAppContainer(
   createBottomTabNavigator(
     {
@@ -14,20 +29,7 @@ const TabRoutes = createAppContainer(
     },
     {
       initialRouteName: "Browse",
-      tabBarOptions: {
-        activeTintColor: "#FCFCFC",
-        inactiveTintColor: "#A8A8A8",
-        style: {
-          height: 60,
-          paddingVertical: 5,
-          backgroundColor: "#000"
-        },
-        labelStyle: {
-          fontSize: 12,
-          lineHeight: 20,
-          fontFamily: "Futura"
-        }
-      },
+      tabBarOptions: tabStyle,
       animationEnabled: true,
       swipeEnabled: true
     }

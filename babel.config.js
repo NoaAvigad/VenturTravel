@@ -4,7 +4,7 @@ module.exports = function babelConfig(api) {
     presets: ["babel-preset-expo"],
     env: {
       test: {
-        presets: ["react-native", ["@babel/preset-env"]]
+        presets: ["@babel/preset-env", "react-native"]
       }
     }
   };
