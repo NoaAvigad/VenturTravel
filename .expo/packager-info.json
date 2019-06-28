@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19008,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 58618,
+  "devToolsPort": 19002,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
   "expoServerNgrokUrl": "https://zj-7k7.anonymous.venturtravel.exp.direct",
   "packagerNgrokUrl": "https://packager.zj-7k7.anonymous.venturtravel.exp.direct",
-  "ngrokPid": 58630
+  "ngrokPid": 27073
 }
