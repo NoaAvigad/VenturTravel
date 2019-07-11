@@ -4,7 +4,7 @@ import style from "./ScreensStyles";
 
 const DiscoverScreen = () => {
   return (
-    <SafeAreaView style={style.safeAreaStyle}>
+    <SafeAreaView style={style.safeArea}>
       <Text style={style.text}>Discover Page is coming soon..</Text>
     </SafeAreaView>
   );

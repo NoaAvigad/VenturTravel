@@ -13,5 +13,4 @@ const App = () => (
   </View>
 );
 
-registerRootComponent(App);
-export default App;
+export default registerRootComponent(App);
