@@ -31,7 +31,7 @@
     ]
   },
   "dependencies": {
-    "@expo/vector-icons": "^10.0.2",
+    "@expo/vector-icons": "^10.0.6",
     "expo": "^33.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
